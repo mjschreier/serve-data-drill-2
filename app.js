@@ -78,8 +78,8 @@ function findById(data, id) {
 }
 
 app.get("/", function(request, response) {
-  response.json({data: instructors});
   response.status(200);
+  response.json({data: instructors});
 })
 
 app.get("/:id", function(request, response) {
@@ -92,8 +92,8 @@ app.get("/:id", function(request, response) {
       }
     })
   }
-  response.json({data: record});
   response.status(200);
+  response.json({data: record});
 })
 
 app.listen(port);
